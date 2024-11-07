@@ -69,29 +69,37 @@ const courses = [
 
 function displayCourses(courses) {
   const courseList = document.getElementById("courses");
+  const modal = document.getElementById("courseModal");
+  const modalContent = document.getElementById("courseInfo");
+  const span = document.getElementsByClassName("close")[0];
+
   courseList.innerHTML = "";
   courses.forEach((course) => {
     const courseItem = document.createElement("button");
     courseItem.classList.add(course.addClassList);
     courseItem.innerHTML = `<h3>${course.subject} ${course.number}</h3>`;
     courseItem.addEventListener("click", () => {
-      const courseInfo = document.createElement("div");
-      courseInfo.classList.add("course-info");
-      courseInfo.innerHTML = `
-				<h3>${course.subject} ${course.number} ${course.title}</h3>
-				<p>${course.description}</p>
-				<p>Credits: ${course.credits}</p>
-				<p>Certificate: ${course.certificate}</p>
-				<p>Technology: ${course.technology.join(", ")}</p>
-			`;
-      const existingInfo = document.querySelector(".course-info");
-      if (existingInfo) {
-        existingInfo.remove();
-      }
-      courseList.appendChild(courseInfo);
+      modalContent.innerHTML = `
+        <h3>${course.subject} ${course.number} ${course.title}</h3>
+        <h4>${course.description}</h4>
+        <p>Credits: ${course.credits}</p>
+        <p>Certificate: ${course.certificate}</p>
+        <p>Technology: ${course.technology.join(", ")}</p>
+      `;
+      modal.style.display = "block";
     });
     courseList.appendChild(courseItem);
   });
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
 }
 
 function updateCompletedCourses(courses) {
@@ -99,12 +107,14 @@ function updateCompletedCourses(courses) {
     if (course.completed) {
       course.completed = true;
       course.addClassList = "finished";
+    } else {
+      course.completed = false;
+      course.addClassList = "unfinished";
     }
   });
 }
 
 function reduceCourses(courses) {
-  // get courses.credits and reduce the total value with that is completed as true. Display the total value
   const totalCreditsCompleted = courses.reduce((total, course) => {
     if (course.completed) {
       return total + course.credits;
@@ -112,7 +122,6 @@ function reduceCourses(courses) {
     return total;
   }, 0);
 
-  // get the total credits of all courses
   const totalCredits = courses.reduce(
     (total, course) => total + course.credits,
     0
