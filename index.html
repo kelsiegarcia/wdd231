@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Kelsie Garcia">
+	<meta name="author" content="Kelsie Garcia">
+	<link rel="stylesheet" href="styles/base.css">
+	<link rel="stylesheet" href="styles/base-larger.css">
+	<script defer src="scripts/getdates.js"></script>
+	<script defer src="scripts/nav.js"></script>
+	<script defer src="scripts/courses.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=League+Spartan&family=Libre+Baskerville:ital@0;1&display=swap"
+		rel="stylesheet">
+	<title>WDD 231 - Dynamic Web Fundamentals - Kelsie Garcia</title>
 </head>
 <body>
-	Hello world
-</body>
+	<header>
+		<div id="menu"></div>
+		<div class="head1">
+			<img src="images/me.webp" alt="self-portrait" width="150" loading="lazy">
+			<h1>Kelsie Garcia</h1>
+		</div>
+		<nav class="navigation" >
+			<ul class="navbar">
+				<li class="active"><a href="index.html" id="home">Home</a></li>
+				<li><a href="#" id="chamber">Chamber</a></li>
+				<li><a href="https://github.com/kelsiegarcia" id="github">Github Profile</a></li>
+				<li><a href="https://www.linkedin.com/in/kelsiegarcia/" id="linkedin">LinkedIn</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main class="card-grid">
+		<section class="card1 card">
+			<h2>
+				Course Work
+			</h2>
+			<div class="course-description">
+				<ul>
+					<li class="course-li"></li>
+					<li class="course-li"></li>
+					<li class="course-li"></li>
+			</div>
+		</section>
+		<section class="card2 card">
+			<div class="hi-description">
+				<h2>Oahu, Hawaii</h2>
+				<img src="images/hawaii.webp" alt="beach" loading="lazy" width="400">
+				<p>View of Kualoa Mountains on Mokoli'i Island</p>
+			</div>
+		</section>
+		<section class="card3 card">
+			<div class="cert-description">
+				<h2>
+					Web and Computer Programming Certificate
+				</h2>
+				<div id="total-credits"></div>
+				<div class="cert3" class="filters">
+					<button id="all">ALL</button>
+					<button id="cse">CSE</button>
+					<button id="wdd">WDD</button>
+				</div>
+			</div>
+			<div class="card4" id="courses">
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>
+			WDD130 <span id="currentyear"></span> - Kelsie Garcia - Aloha, Hawaii
+		</p>
+		<p><span id="lastmodified"></span></p>
+	</footer>
+	</body>
 </html>
