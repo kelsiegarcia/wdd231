@@ -114,6 +114,32 @@ function updateCompletedCourses(courses) {
   });
 }
 
+function filterCourses(courses) {
+  const certButton = document.getElementById("cse");
+  const wddButton = document.getElementById("wdd");
+  const allButton = document.getElementById("all");
+
+  if (certButton) {
+    certButton.addEventListener("click", () => {
+      const cseCourses = courses.filter((course) => course.subject === "CSE");
+      displayCourses(cseCourses);
+      reduceCourses(cseCourses);
+    });
+  }
+  if (wddButton) {
+    wddButton.addEventListener("click", () => {
+      const wddCourses = courses.filter((course) => course.subject === "WDD");
+      displayCourses(wddCourses);
+      reduceCourses(wddCourses);
+    });
+  }
+  if (allButton) {
+    allButton.addEventListener("click", () => {
+      displayCourses(courses);
+      reduceCourses(courses);
+    });
+  }
+}
 function reduceCourses(courses) {
   const totalCreditsCompleted = courses.reduce((total, course) => {
     if (course.completed) {
@@ -121,7 +147,6 @@ function reduceCourses(courses) {
     }
     return total;
   }, 0);
-
   const totalCredits = courses.reduce(
     (total, course) => total + course.credits,
     0
@@ -129,33 +154,6 @@ function reduceCourses(courses) {
 
   const totalCreditsElement = document.getElementById("total-credits");
   totalCreditsElement.innerHTML = `Total number of credits completed: ${totalCreditsCompleted} / ${totalCredits} credits`;
-}
-
-function filterCourses(courses) {
-  // Get the buttons
-  const certButton = document.getElementById("cse");
-  const wddButton = document.getElementById("wdd");
-  const allButton = document.getElementById("all");
-
-  // depending on what button is clicked, filter courses
-  if (certButton) {
-    certButton.addEventListener("click", () => {
-      const cseCourses = courses.filter((course) => course.subject === "CSE");
-      //display the filtered courses
-      displayCourses(cseCourses);
-    });
-  }
-  if (wddButton) {
-    wddButton.addEventListener("click", () => {
-      const wddCourses = courses.filter((course) => course.subject === "WDD");
-      displayCourses(wddCourses);
-    });
-  }
-  if (allButton) {
-    allButton.addEventListener("click", () => {
-      displayCourses(courses);
-    });
-  }
 }
 
 updateCompletedCourses(courses);
