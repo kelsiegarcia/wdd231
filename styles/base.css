@@ -110,6 +110,12 @@ li:hover {
 	cursor: pointer;
 }
 
+.navbar {
+	display: flex;
+	flex-direction: column;
+	background-color: #eaf0ef;
+}
+
 
 .navigation a {
 	font-size: 25px;
