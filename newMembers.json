@@ -1,0 +1,28 @@
+{
+	"familyName": "James",
+	"dateMovedIn": "2019-01-01",
+	"numberOfPeople": 4,
+	"visitbyBishopric": true,
+	"indivuduals": [
+		{
+			"firstName": "John",
+			"gender": "male",
+			"birthdate": "1990-01-01"
+		},
+		{
+			"firstName": "Mary",
+			"gender": "female",
+			"birthdate": "1990-05-25"
+		},
+		{
+			"firstName": "JJ",
+			"gender": "male",
+			"birthdate": "2017-01-04"
+		},
+		{
+			"firstName": "MaryJane",
+			"gender": "female",
+			"birthdate": "2019-11-01"
+		}
+	]
+}
