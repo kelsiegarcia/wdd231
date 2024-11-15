@@ -16,6 +16,57 @@ li {
 	padding: 1rem;
 }
 
+.buttonViews {
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+	gap: 1rem;
+}
+
+#gridButton {
+	background-image: url('../images/grid.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 64px;
+	height: 64px;
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+	transition: background-color 0.3s ease;
+	padding: 1rem;
+}
+
+#gridButton:hover {
+	background-color: rgb(83, 173, 251);
+}
+
+
+#gridButton.active {
+	background-color: rgb(83, 173, 251);
+}
+
+#listButton {
+	background-image: url('../images/list.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 64px;
+	height: 64px;
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+	transition: background-color 0.3s ease;
+	padding: 1rem;
+}
+
+#listButton:hover {
+	background-color: rgb(83, 173, 251);
+}
+
+
+#listButton.active {
+	background-color: rgb(83, 173, 251);
+}
+
 header {
 	display: grid;
 	grid-template-columns: 50px auto 44px;
@@ -43,7 +94,8 @@ nav {
 	width: 100%;
 	text-align: right;
 	padding: .25rem 2vw;
-	color: white
+	color: white;
+	padding: 1rem;
 }
 
 ul.menuLinks li a {
@@ -51,6 +103,11 @@ ul.menuLinks li a {
 	padding: .75rem 2vw;
 	text-decoration: none;
 	color: white
+}
+
+ul.menuLinks li:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+	color: rgba(0, 0, 0,0.2);
 }
 
 li.current-menu-item {
@@ -75,15 +132,31 @@ nav ul {
 	overflow: hidden;
 }
 
+.list .member-card:nth-child(odd) {
+	background-color: aliceblue;
+}
+
+.list .member-card:nth-child(even) {
+	background-color: white;
+}
+
 nav.open {
 	grid-template-rows: 1fr;
 }
 
-#members {
-	margin: 10px;
+
+.grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
 	grid-gap: 1rem;
+	margin: 10px;
+}
+
+.list {
+	display: block;
+	width: 680px;
+	margin: 0 auto;
+	padding: 1rem;
 }
 
 .member-card {
@@ -101,19 +174,25 @@ nav.open {
 	padding-top: 2rem;
 }
 
+.list .member-card img {
+	/* remove image from the flow */
+	display: none;
+}
+
+
 .member-card p,
 a {
 	padding-top: 1rem;
 }
 
+footer {
+	font-family: 'montserrat', sans-serif;
+	background-color: rgb(23, 60, 86);
+	color: white;
+	text-align: center;
+	max-width: 100%;
+	align-content: center;
+	position: sticky;
+	height: 150px;
 
-/* add a class that changes the members card view from a grid to a list and include two buttons. */
-/* The first button should be labeled "Grid" and the second button should be labeled "List". */
-/* The buttons should be styled to look like tabs. */
-/* The "Grid" button should be styled to look like it is selected by default. */
-/* The "List" button should be styled to look like it is not selected by default. */
-/* The "Grid" button should be styled to look like it is selected when clicked. */
-/* The "List" button should be styled to look like it is selected when clicked. */
-/* The "Grid" button should be styled to look like it is not selected when the "List" button is clicked. */
-/* The "List" button should be styled to look like it is not selected when the "Grid" button is clicked. */
-
+}
