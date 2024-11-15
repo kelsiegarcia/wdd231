@@ -4,7 +4,7 @@
 		"address": "1177 Bishop Street, Honolulu, HI 96813",
 		"phone": "(808) 540-8000",
 		"website": "https://www.hawaiipacifichealth.org/",
-		"image": "hawaii_pacific_health.png",
+		"image": "hph.logo.webp",
 		"membershipLevel": 3
 	},
 	{
@@ -12,7 +12,7 @@
 		"address": "651 South King Street, Honolulu, HI 96813",
 		"phone": "(808) 537-2211",
 		"website": "https://www.queens.org/",
-		"image": "queens_health_systems.png",
+		"image": "queens.logo.webp",
 		"membershipLevel": 3
 	},
 	{
@@ -20,7 +20,7 @@
 		"address": "1319 Punahou Street, Honolulu, HI 96826",
 		"phone": "(808) 973-4000",
 		"website": "https://www.kapiolani.org/",
-		"image": "kapiolani_medical_center.png",
+		"image": "kapiolani.logo.webp",
 		"membershipLevel": 2
 	},
 	{
@@ -28,7 +28,7 @@
 		"address": "94-740 Ukee Street, Waipahu, HI 96797",
 		"phone": "(808) 488-5000",
 		"website": "https://www.kp.org/hawaii",
-		"image": "kaiser_permanente_hawaii.png",
+		"image": "kaiser.logo.webp",
 		"membershipLevel": 3
 	},
 	{
@@ -36,7 +36,7 @@
 		"address": "1301 Punchbowl Street, Honolulu, HI 96813",
 		"phone": "(808) 537-2211",
 		"website": "https://www.queens.org/the-queens-medical-center",
-		"image": "the_queens_medical_center.png",
+		"image": "queens.medical.logo.webp",
 		"membershipLevel": 3
 	},
 	{
@@ -44,15 +44,15 @@
 		"address": "2260 Liliha Street, Honolulu, HI 96817",
 		"phone": "(808) 547-6000",
 		"website": "https://www.straub.org/",
-		"image": "straub_medical_center.png",
+		"image": "straub.logo.webp",
 		"membershipLevel": 2
 	},
 	{
-		"name": "Hawaii Pacific Health Medical Group",
-		"address": "1177 Bishop Street, Honolulu, HI 96813",
-		"phone": "(808) 540-8000",
-		"website": "https://www.hawaiipacifichealth.org/medical-group/",
-		"image": "hawaii_pacific_health_medical_group.png",
+		"name": "Adventist Health Castle",
+		"address": "640 Ulukahiki Street, Kailua, HI 96734",
+		"phone": "(808) 263-5500",
+		"website": "https://www.adventisthealth.org/castle",
+		"image": "castle.logo.webp",
 		"membershipLevel": 3
 	}
 ]

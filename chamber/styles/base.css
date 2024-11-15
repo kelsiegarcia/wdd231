@@ -7,19 +7,113 @@ body {
 	font-family: "Montserrat", sans-serif;
 }
 
+
 h3 {
 	color: navy;
+}
+
+li {
+	padding: 1rem;
+}
+
+header {
+	display: grid;
+	grid-template-columns: 50px auto 44px;
+	align-items: center;
+	background-color: rgb(23, 60, 86);
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	padding: 1rem
+}
+
+nav {
+	background-color: rgb(23, 60, 86);
+}
+
+#myButton::before {
+	content: "=";
+}
+
+#myButton {
+	font-size: 2rem;
+	background: none;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	text-align: right;
+	padding: .25rem 2vw;
+	color: white
+}
+
+ul.menuLinks li a {
+	display: block;
+	padding: .75rem 2vw;
+	text-decoration: none;
+	color: white
+}
+
+li.current-menu-item {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+ul.menuLinks {
+	list-style: none;
+}
+
+#myButton.open::before {
+	content: "x";
+}
+
+nav {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows 0.5s ease-out;
+}
+
+nav ul {
+	overflow: hidden;
+}
+
+nav.open {
+	grid-template-rows: 1fr;
 }
 
 #members {
 	margin: 10px;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
 	grid-gap: 1rem;
 }
 
 .member-card {
+	display: flex;
+	flex-direction: column;
 	border: 1px solid rgb(0 0 0 /.1);
 	background-color: aliceblue;
 	padding: 1rem;
 }
+
+.member-card img {
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	padding-top: 2rem;
+}
+
+.member-card p,
+a {
+	padding-top: 1rem;
+}
+
+
+/* add a class that changes the members card view from a grid to a list and include two buttons. */
+/* The first button should be labeled "Grid" and the second button should be labeled "List". */
+/* The buttons should be styled to look like tabs. */
+/* The "Grid" button should be styled to look like it is selected by default. */
+/* The "List" button should be styled to look like it is not selected by default. */
+/* The "Grid" button should be styled to look like it is selected when clicked. */
+/* The "List" button should be styled to look like it is selected when clicked. */
+/* The "Grid" button should be styled to look like it is not selected when the "List" button is clicked. */
+/* The "List" button should be styled to look like it is not selected when the "Grid" button is clicked. */
+
