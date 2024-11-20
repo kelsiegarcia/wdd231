@@ -45,7 +45,7 @@ h1 {
 	font-size: 45px;
 }
 
-p {
+.hi-description p {
 	font-size: 18px;
 	padding: 0 0 1rem 0;
 	text-align: center;
@@ -301,4 +301,51 @@ footer {
 
 #course-info {
 	text-align: left;
+}
+
+.weather {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Weather widget */
+.weather {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.weather p {
+	padding-top: 10px;
+}
+
+.weather figcaption {
+	padding: 0;
+	font-size: 1.3rem;
+}
+#current-temp {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	font-size: 1.5rem;
+	color: #333;
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
+
+figure {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1.5rem;
+}
+
+
+
+#weather-icon {
+	width: 50px;
+	height: 100%;
+	padding: 0px;
 }

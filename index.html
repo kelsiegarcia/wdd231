@@ -15,6 +15,7 @@
 	<script defer src="scripts/getdates.js"></script>
 	<script defer src="scripts/nav.js"></script>
 	<script defer src="scripts/courses.js"></script>
+	<script defer src="scripts/weather.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +30,13 @@
 		<div class="head1">
 			<img src="images/me.webp" alt="self-portrait" width="150">
 			<h1>Kelsie Garcia</h1>
+			<div class='weather'>
+				<p>Weather in Hawaii<span id="current-temp"></span></p>
+				<figure>
+					<img id="weather-icon" src="" alt="">
+					<figcaption></figcaption>
+				</figure>
+			</div>
 		</div>
 		<nav class="navigation" >
 			<ul class="navbar">
@@ -83,7 +91,7 @@
 	</div>
 	<footer>
 		<p>
-			WDD130 <span id="currentyear"></span> - Kelsie Garcia - Aloha, Hawaii
+			WDD230 <span id="currentyear"></span> - Kelsie Garcia - Aloha, Hawaii
 		</p>
 		<p><span id="lastmodified"></span></p>
 	</footer>
