@@ -38,11 +38,15 @@ li {
 
 #gridButton:hover {
 	background-color: rgb(83, 173, 251);
+	border: 1px solid darkblue;
+	border-radius: 5px;
 }
 
 
 #gridButton.active {
 	background-color: rgb(83, 173, 251);
+	border: 1px solid darkblue;
+	border-radius: 5px;
 }
 
 #listButton {
@@ -60,11 +64,15 @@ li {
 
 #listButton:hover {
 	background-color: rgb(83, 173, 251);
+	border: 1px solid darkblue;
+	border-radius: 5px;
 }
 
 
 #listButton.active {
 	background-color: rgb(83, 173, 251);
+	border: 1px solid darkblue;
+	border-radius: 5px;
 }
 
 header {

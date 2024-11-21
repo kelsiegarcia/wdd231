@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,6 @@
 	<meta property="og:image" content="https://kelsiegarcia.github.io/wdd231/chamber/images/city.webp">
 	<meta property="og:url" content="https://kelsiegarcia.github.io/wdd231/chamber/directory.html">
 	<script defer src="scripts/navbar.js"></script>
-	<script src="scripts/displayMember.js" defer></script>
 	<script defer src="../scripts/getdates.js"></script>
 	<link rel="stylesheet" href="styles/base.css">
 	<link rel="stylesheet" href="styles/larger.css">
@@ -22,16 +20,15 @@
 		href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
 		rel="stylesheet">
 	<title>Hawaii Chamber of Commerce</title>
-	<link rel="icon" href="favicon.ico">
+	<link rel="icon" href="favicon.ico"
 </head>
-
 <body>
 	<header>
 		<img src="images/logo.webp" alt="Hawaii Chamber of Commerce Logo" id="logo" width="50" height="56">
 		<h1 id="title">Hawaii Chamber of Commerce</h1>
 		<button id="myButton"></button>
 	</header>
-
+	
 	<nav id="animateMe">
 		<ul class="menuLinks">
 			<li><a href="#" title="Home">Home</a></li>
@@ -40,20 +37,24 @@
 			<li><a href="#" title="Discover">Discover</a></li>
 		</ul>
 	</nav>
-	<main>
-		<div class="buttonViews">
-		<button id="gridButton"></button>
-		<button id="listButton"></button>
-		</div>
-		<div id="members">
-		</div>
-	</main>
-	<footer>
-		<p>
-			WDD230 <span id="currentyear"></span> - Kelsie Garcia - Aloha, Hawaii
-		</p>
-		<p><span id="lastmodified"></span></p>
-	</footer>
-</body>
 
+	<main>
+		<picture>
+			<source srcset="./images/hero-h.webp" alt='Hawaii city' id='hero' width="1520px" media="(min-width: 675px)" loading="lazy">
+			<img class="hero" alt="small Hawaii city" src="images/hero-small-h.webp" loading="lazy">
+		</picture>
+		<main>
+			<section>
+				<h1>Home</h1>
+				
+			</section>
+		</main>
+		<footer>
+			<p>
+				WDD230 <span id="currentyear"></span> - Kelsie Garcia - Aloha, Hawaii
+			</p>
+			<p><span id="lastmodified"></span></p>
+		</footer>
+	</main>
+</body>
 </html>
