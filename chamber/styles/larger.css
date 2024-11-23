@@ -1,4 +1,4 @@
-@media only screen and (min-width: 38rem) {
+@media only screen and (min-width: 40em) {
 	#myButton {
 		display: none
 	}
@@ -15,4 +15,51 @@
 	nav {
 		grid-template-rows: 1fr;
 	}
+
+	#hero {
+		position: relative
+	}
+
+	.join {
+		position: absolute;
+		bottom: 100px;
+		left: 900px;
+		transform: translate(-50%, 50%);
+		background-color: white;
+		color: black;
+		padding: 25px;
+		border-radius: 5px;
+		width: 225px;
+		font-size: 25px;
+		cursor: pointer;
+	}
+
+
+	.current-happenings {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr;
+		gap: 20px;
+	}
+
+
+
+
+
+	.grid-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 20px;
+		border: 1px solid black;
+		border-radius: 5px;
+	}
 }
+
+@media only screen and (min-width: 640px) {
+	.join {
+		bottom: 100px;
+		left: 450px;
+	}
+}
+

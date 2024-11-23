@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,10 @@
 	<meta property="og:image" content="https://kelsiegarcia.github.io/wdd231/chamber/images/city.webp">
 	<meta property="og:url" content="https://kelsiegarcia.github.io/wdd231/chamber/directory.html">
 	<script defer src="scripts/navbar.js"></script>
+
+	<script defer src="../scripts/weather.js"></script>
 	<script defer src="../scripts/getdates.js"></script>
+	<script src="scripts/spotlight.js" type="module"></script>
 	<link rel="stylesheet" href="styles/base.css">
 	<link rel="stylesheet" href="styles/larger.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -19,16 +23,16 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
 		rel="stylesheet">
-	<title>Hawaii Chamber of Commerce</title>
-	<link rel="icon" href="favicon.ico"
-</head>
+	<title>Honolulu Hawaii Chamber of Commerce</title>
+	<link rel="icon" href="favicon.ico" </head>
+
 <body>
 	<header>
 		<img src="images/logo.webp" alt="Hawaii Chamber of Commerce Logo" id="logo" width="50" height="56">
 		<h1 id="title">Hawaii Chamber of Commerce</h1>
 		<button id="myButton"></button>
 	</header>
-	
+
 	<nav id="animateMe">
 		<ul class="menuLinks">
 			<li><a href="#" title="Home">Home</a></li>
@@ -40,21 +44,47 @@
 
 	<main>
 		<picture>
-			<source srcset="./images/hero-h.webp" alt='Hawaii city' id='hero' width="1520px" media="(min-width: 675px)" loading="lazy">
+			<source srcset="images/hero-h1.webp" alt='Hawaii city' id="hero" width="1520px" media="(min-width: 675px)"
+				loading="lazy">
 			<img class="hero" alt="small Hawaii city" src="images/hero-small-h.webp" loading="lazy">
 		</picture>
-		<main>
-			<section>
-				<h1>Home</h1>
-				
-			</section>
-		</main>
-		<footer>
-			<p>
-				WDD230 <span id="currentyear"></span> - Kelsie Garcia - Aloha, Hawaii
-			</p>
-			<p><span id="lastmodified"></span></p>
-		</footer>
+		<button class="join">Join Today</button>
+		<h1 class="home">Home</h1>
+		<section class="current-happenings">
+			<div class="grid-item wide-item">
+				<h2>Current Happenings</h2>
+				<p>Stay up to date with the latest news and events happening in Hawaii.</p>
+				<img src="images/logo.webp" alt="News" width="150" height="200">
+				<button class="read-more">Read More</button>
+			</div>
+			<div class="grid-item smaller-item">
+				<h2>Current Weather</h2>
+				<span id="current-temp"></span>
+				<figure>
+					<img id="weather-icon" src="" alt="">
+					<figcaption></figcaption>
+				</figure>
+			</div>
+			<div class="grid-item smaller-item">
+				<h2>3 day Forecast</h2>
+				<p><span id="date1"></span></p>
+				<p><span id="day1-temp"></span></p>
+				<p><span id="date2"></span></p>
+				<p><span id="day2-temp"></span></p>
+				<p><span id="date3"></span></p>
+				<p><span id="day3-temp"></span></p>
+			</div>
+		</section>
+		<section id="spotlight">
+		</section>
+	</main>
+	<footer>
+		<p>
+			WDD230 <span id="currentyear"></span> - Kelsie Garcia - Aloha, Hawaii
+		</p>
+		<p><span id="lastmodified"></span></p>
+	</footer>
 	</main>
 </body>
+
 </html>

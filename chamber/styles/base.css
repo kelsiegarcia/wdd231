@@ -12,8 +12,37 @@ h3 {
 	color: navy;
 }
 
+.current-happenings, .monthly-cards, .home {
+	margin: 3rem;
+}
+
 li {
 	padding: 1rem;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+#weather-icon {
+	height: 150px;
+	width: 150px;
+}
+
+.join {
+	position: absolute;
+	bottom: 100px;
+	left: 875px;
+	transform: translate(-50%, 50%);
+	background-color: white;
+	color: black;
+	padding: 25px;
+	border-radius: 5px;
+	width: 225px;
+	font-size: 25px;
+	cursor: pointer;
 }
 
 .buttonViews {
@@ -21,6 +50,13 @@ li {
 	justify-content: center;
 	padding: 1rem;
 	gap: 1rem;
+}
+
+#spotlight {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 10px;
+	padding: 0 3rem 3rem 3rem;
 }
 
 #gridButton {
@@ -167,6 +203,9 @@ nav.open {
 	padding: 1rem;
 }
 
+.current-happenings h2, p {
+	padding: 0 0 1rem 0;
+}
 .member-card {
 	display: flex;
 	flex-direction: column;
@@ -203,4 +242,16 @@ footer {
 	position: sticky;
 	height: 150px;
 
+}
+
+.join {
+	bottom: 250px;
+	left: 150px;
+}
+
+@media only screen and (min-width: 739px) {
+	.join {
+		bottom: 50px; 
+		left: 450px;
+	}
 }
