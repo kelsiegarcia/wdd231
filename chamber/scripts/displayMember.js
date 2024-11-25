@@ -17,6 +17,7 @@ async function fetchMemberData() {
 				<h3>${member.name}</h3>
 				<p>${member.address}</p>
 				<p>${member.phone}</p>
+				<p>${member.membershipLevel}</p>
 				<a href="${member.website}" target="_blank">${member.website}</a>
 				<figure>
 				<img src="images/${member.image}" alt="${member.name}"width="200" height="auto">

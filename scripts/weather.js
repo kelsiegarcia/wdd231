@@ -27,7 +27,10 @@ async function apiFetch() {
 
 function displayResults(data) {
   currentTemp.innerHTML = `${Math.round(data.main.temp)}&deg;F`;
-  captionDesc.textContent = data.weather[0].description;
+  captionDesc.textContent = data.weather[0].description.replace(
+    /\b\w/g,
+    (char) => char.toUpperCase()
+  );
   weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 }
 

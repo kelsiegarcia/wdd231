@@ -21,7 +21,7 @@
 		"phone": "(808) 973-4000",
 		"website": "https://www.kapiolani.org/",
 		"image": "kapiolani.logo.webp",
-		"membershipLevel": 2
+		"membershipLevel": 1
 	},
 	{
 		"name": "Kaiser Permanente Hawaii",
@@ -29,14 +29,14 @@
 		"phone": "(808) 488-5000",
 		"website": "https://www.kp.org/hawaii",
 		"image": "kaiser.logo.webp",
-		"membershipLevel": 3
+		"membershipLevel": 2
 	},
 	{
 		"name": "The Queen's Medical Center",
 		"address": "1301 Punchbowl Street, Honolulu, HI 96813",
 		"phone": "(808) 537-2211",
 		"website": "https://www.queens.org/the-queens-medical-center",
-		"image": "queens.medical.logo.webp",
+		"image": "queens.logo.webp",
 		"membershipLevel": 3
 	},
 	{
@@ -45,7 +45,7 @@
 		"phone": "(808) 547-6000",
 		"website": "https://www.straub.org/",
 		"image": "straub.logo.webp",
-		"membershipLevel": 2
+		"membershipLevel": 1
 	},
 	{
 		"name": "Adventist Health Castle",
@@ -53,6 +53,6 @@
 		"phone": "(808) 263-5500",
 		"website": "https://www.adventisthealth.org/castle",
 		"image": "castle.logo.webp",
-		"membershipLevel": 3
+		"membershipLevel": 1
 	}
 ]

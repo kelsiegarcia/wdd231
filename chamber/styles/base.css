@@ -12,8 +12,30 @@ h3 {
 	color: navy;
 }
 
+.current-happenings {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+	
+}
+
 .current-happenings, .monthly-cards, .home {
 	margin: 3rem;
+}
+
+.grid-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	border: 1px solid rgb(0 0 0 / .2);
+	border-radius: 5px;
+}
+
+#day1-temp, #day2-temp, #day3-temp, #current-temp {
+	font-size: 2rem;
+	padding-bottom: 10px;
 }
 
 li {
@@ -27,8 +49,30 @@ img {
 
 
 #weather-icon {
-	height: 150px;
-	width: 150px;
+	height: 200px;
+	width: 200px;
+}
+
+button {
+	margin-top: 15px;
+	padding: 15px;
+	border-radius: 5px;
+	width: 200px;
+	font-size: 25px;
+	cursor: pointer;
+	background-color: #0f47e3;
+	color: white;
+}
+
+figcaption {
+	display: flex;
+	justify-content: center;
+	font-size:large;
+}
+
+
+button.read-more {
+	margin-top: 35px;
 }
 
 .join {
@@ -38,11 +82,7 @@ img {
 	transform: translate(-50%, 50%);
 	background-color: white;
 	color: black;
-	padding: 25px;
-	border-radius: 5px;
 	width: 225px;
-	font-size: 25px;
-	cursor: pointer;
 }
 
 .buttonViews {
@@ -54,7 +94,7 @@ img {
 
 #spotlight {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr;
 	gap: 10px;
 	padding: 0 3rem 3rem 3rem;
 }
@@ -203,9 +243,21 @@ nav.open {
 	padding: 1rem;
 }
 
+h2 {
+	font-family: 'roboto', sans-serif;
+}
+
+.spotlight-header {
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin: 20px 0;
+	text-align: center;
+}
+
 .current-happenings h2, p {
 	padding: 0 0 1rem 0;
 }
+
 .member-card {
 	display: flex;
 	flex-direction: column;
@@ -215,7 +267,7 @@ nav.open {
 }
 
 .member-card img {
-	height: auto;
+	height: 75px;
 	display: block;
 	margin: 0 auto;
 	padding-top: 2rem;
@@ -245,13 +297,7 @@ footer {
 }
 
 .join {
-	bottom: 250px;
+	bottom: 450px;
 	left: 150px;
 }
 
-@media only screen and (min-width: 739px) {
-	.join {
-		bottom: 50px; 
-		left: 450px;
-	}
-}

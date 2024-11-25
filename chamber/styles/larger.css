@@ -1,9 +1,10 @@
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 950px) {
 	#myButton {
 		display: none
 	}
 
-	ul.menuLinks, ul.menuLinks.open {
+	ul.menuLinks,
+	ul.menuLinks.open {
 		display: flex;
 		justify-content: flex-end;
 	}
@@ -20,10 +21,26 @@
 		position: relative
 	}
 
+	.current-happenings {
+		grid-template-columns: 700px 300px auto;
+		/* Three columns on larger screens */
+		gap: 20px;
+	}
+
+	#spotlight {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.wide-item {
+		/* make the width cover 1.5 columns */
+		/* grid-column: span 1.5; */
+	}
+
 	.join {
 		position: absolute;
-		bottom: 100px;
-		left: 900px;
+		bottom: 450px;
+		left: 400px;
 		transform: translate(-50%, 50%);
 		background-color: white;
 		color: black;
@@ -34,32 +51,5 @@
 		cursor: pointer;
 	}
 
-
-	.current-happenings {
-		display: grid;
-		grid-template-columns: 2fr 1fr 1fr;
-		gap: 20px;
-	}
-
-
-
-
-
-	.grid-item {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 20px;
-		border: 1px solid black;
-		border-radius: 5px;
-	}
-}
-
-@media only screen and (min-width: 640px) {
-	.join {
-		bottom: 100px;
-		left: 450px;
-	}
 }
 
