@@ -32,7 +32,7 @@ async function fetchSpotlightData() {
       let membershipText;
       switch (member.membershipLevel) {
         case 1:
-          membershipText = 'Silver';
+          membershipText = 'Non-profit';
           break;
         case 2:
           membershipText = 'Gold';

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Hawaii Chamber of Commerce">
+	<meta name="author" content="Kelsie Garcia">
+	<meta property="og:title" content="Hawaii Chamber of Commerce">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://kelsiegarcia.github.io/wdd231/chamber/images/city.webp">
+	<meta property="og:url" content="https://kelsiegarcia.github.io/wdd231/chamber/directory.html">
+	<script defer src="scripts/navbar.js"></script>
+	<script defer src="../scripts/getdates.js"></script>
+	<script defer src="scripts/membership.js"></script>
+	<link rel="stylesheet" href="styles/base.css">
+	<link rel="stylesheet" href="styles/larger.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">
+
+	<title>Honolulu Hawaii Chamber of Commerce</title>
+	<link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+	<header>
+		<img src="images/logo.webp" alt="Hawaii Chamber of Commerce Logo" id="logo" width="50" height="56">
+		<h1 id="title">Hawaii Chamber of Commerce</h1>
+		<button id="myButton"></button>
+	</header>
+
+	<nav id="animateMe">
+		<ul class="menuLinks">
+			<li class="current-menu-item"><a href="index.html" title="Home">Home</a></li>
+			<li><a href="directory.html" title="Directory">Directory</a></li>
+			<li><a href="join.html" title="Join">Join</a></li>
+			<li><a href="#" title="Discover">Discover</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<div class="join-grid">
+			<div class="form">
+				<h2>Join the Hawaii Chamber of Commerce</h2>
+				<h3>By filling out the form below</h3>
+				<form method="GET" action="thankyou.html" class="designOne">
+					<label>First Name <input type="text" name="first" required autocomplete="given-name"
+							title="Your First Name"></label>
+					<label>Last Name <input type="text" name="last" required autocomplete="family-name"
+							title="Your Last Name"></label>
+					<label>Your Title at Organization<input type="text" name="title" required autocomplete="organization-title"
+							title="Your Title at Organization" pattern="[a-zA-Z\s\-]{7,}"></label>
+
+					<label>Cell Phone <input type="tel" name="phone" autocomplete="tel" title="A Phone Number with dashes"
+							placeholder="808-555-1234"></label>
+					<label>Email <input type="email" name="email" required placeholder="youremail@wherever.com" title="Your Email"
+							autocomplete="email"></label>
+
+					<h3>Select Membership Level</h3>
+					<label><input type="radio" name="membership" value="non-profit" checked>Non-profit - no fee</label>
+					<label><input type="radio" name="membership" value="bronze">Bronze Membership - $12/mo</label>
+					<label><input type="radio" name="membership" value="silver">Silver Membership - $40/mo</label>
+					<label><input type="radio" name="membership" value="gold">Gold Membership - $100/mo</label>
+					<input type="hidden" name="timestamp" id="timestamp" value="">
+
+					<label>Business name<input type="text" name="organization" required autocomplete="organization" title="organization"></label>
+					<label for="description">Description of business:</label>
+					<textarea id="description" name="description" rows="4" cols="50"></textarea>
+
+					<input type="submit" value="Sign up now" id="submitButton">
+				</form>
+			</div>
+
+			<div id="membership-container"></div>
+			<dialog id="membership-cards">
+				<h3 id="modal-title"></h3>
+				<p id="modal-description"></p>
+				<p id="modal-price"></p>
+				<button id="close-modal">X</button>
+			</dialog>
+		</div>
+
+		<footer>
+			<p>
+				WDD230 <span id="currentyear"></span> - Kelsie Garcia - Aloha, Hawaii
+			</p>
+			<p><span id="lastmodified"></span></p>
+		</footer>
+
+	</main>
+</body>
+
+</html>
