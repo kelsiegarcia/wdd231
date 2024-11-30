@@ -32,11 +32,6 @@
 		gap: 20px;
 	}
 
-	.wide-item {
-		/* make the width cover 1.5 columns */
-		/* grid-column: span 1.5; */
-	}
-
 	.join {
 		position: absolute;
 		bottom: 450px;
