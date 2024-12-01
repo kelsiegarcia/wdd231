@@ -26,7 +26,11 @@ h3 {
 	color: navy;
 }
 
-.header {
+.header h1 {
+	margin: 1rem 3rem;
+}
+
+.header h3 {
 	margin: 1rem 3rem;
 }
 
