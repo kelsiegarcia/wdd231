@@ -398,6 +398,7 @@ input:-webkit-autofill {
 	flex-direction: column;
 	align-items: center;
 	padding: var(--padding-standard);
+	height: 675px;
 }
 
 .info h2,
