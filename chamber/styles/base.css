@@ -26,13 +26,10 @@ h3 {
 	color: navy;
 }
 
-.header h1 {
+.header, .header h1, .header h3 {
 	margin: 1rem 3rem;
 }
 
-.header h3 {
-	margin: 1rem 3rem;
-}
 
 .current-happenings {
 	display: grid;
@@ -86,6 +83,7 @@ button {
 
 button:hover {
 	background-color: var(--color-hover);
+	color: white;
 }
 
 figcaption {
@@ -183,7 +181,18 @@ nav {
 
 button.read-more {
 	margin: 10px;
-}	
+	padding: var(--padding-large);
+	border-radius: var(--border-radius);
+	width: 200px;
+	font-size: 25px;
+	cursor: pointer;
+	background-color: var(--color-accent);
+	color: var(--color-secondary);
+}
+
+button.read-more:hover {
+	background-color: var(--color-hover);
+}
 
 ul.menuLinks li a {
 	display: block;
