@@ -23,7 +23,6 @@ showInfo.innerHTML = `<p>Form for ${show('first')} ${show('last')}</p>
 <p>Title: ${show('title')} at ${show('organization')}</p>
 <p>Business Description: ${show('description')}</p> 
 <p>Membership Level: ${show('membership')}</p>
-<p>Price: ${show('price')}</p>
 <p>Your email: <a href="${email}">${email}</a></p>
 <p> Date and time processed: ${timestamp}</p>
 `;
