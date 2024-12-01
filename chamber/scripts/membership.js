@@ -52,6 +52,7 @@ const membershipModal = document.querySelector('#membership-cards');
 const modalTitle = document.querySelector('#modal-title');
 const modalDescription = document.querySelector('#modal-description');
 const modalPrice = document.querySelector('#modal-price');
+const modalBenefits = document.querySelector('#modal-benefits');
 const closeModalButton = document.querySelector('#close-modal');
 
 function displayMembershipLevels() {
@@ -75,6 +76,7 @@ function displayMembershipLevels() {
 function openModal(level) {
   modalTitle.textContent = level.name;
   modalDescription.textContent = level.description;
+  modalBenefits.textContent = level.benefits.join(', ');
   modalPrice.textContent = `Price: $${level.price}`;
   membershipModal.showModal();
 }

@@ -43,10 +43,12 @@
 	</nav>
 
 	<main>
+		<div class='header'>
+			<h1>Join the Hawaii Chamber of Commerce</h1>
+			<h3>By filling out the form below</h3>
+		</div>
 		<div class="join-grid">
 			<div class="form">
-				<h2>Join the Hawaii Chamber of Commerce</h2>
-				<h3>By filling out the form below</h3>
 				<form method="GET" action="thankyou.html" class="designOne">
 					<label>First Name <input type="text" name="first" required autocomplete="given-name"
 							title="Your First Name"></label>
@@ -77,10 +79,13 @@
 
 			<div id="membership-container"></div>
 			<dialog id="membership-cards">
-				<h3 id="modal-title"></h3>
+				<div class="modal-header-container">
+					<h3 id="modal-title"></h3>
+					<div id="close-modal">X</div>
+				</div>
 				<p id="modal-description"></p>
+				<p id="modal-benefits"></p>
 				<p id="modal-price"></p>
-				<button id="close-modal">X</button>
 			</dialog>
 		</div>
 
@@ -94,4 +99,4 @@
 	</main>
 </body>
 
-</html>
+</html>style
