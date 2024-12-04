@@ -473,3 +473,19 @@ a {
 .grid-item h3 {
 	padding: var(--padding-standard);
 }
+
+/* discover page */
+.discover-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: var(--padding-standard);
+	margin: 2rem;
+	justify-items: center;
+}
+
+.image-bar {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: 20px;
+}
