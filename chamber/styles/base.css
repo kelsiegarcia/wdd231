@@ -489,3 +489,45 @@ a {
 	flex-direction: column;
 	gap: 20px;
 }
+
+/* visit modal on discover page */
+
+.modal-visit {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%;
+	/* Full width */
+	height: 100%;
+	/* Full height */
+	background-color: rgba(0,0,0,0.5);
+	justify-content: center;
+	align-items: center;
+}
+
+.visit-modal-content {
+	background-color: #fefefe;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 25%;
+}
+
+.close {
+	position: absolute;
+	top: 227px;
+	right: 558px;
+	font-size: 35px;
+	font-weight: bold;
+	color: #000;
+	cursor: pointer;
+}
+
+#visitModalMessage {
+	text-align: center;
+}

@@ -11,7 +11,7 @@
 	<meta property="og:image" content="https://kelsiegarcia.github.io/wdd231/chamber/images/city.webp">
 	<meta property="og:url" content="https://kelsiegarcia.github.io/wdd231/chamber/directory.html">
 	<script defer src="scripts/navbar.js"></script>
-	<script src="scripts/displayMember.js" defer></script>
+	<script src="scripts/displayVisit.js" defer></script>
 	<script defer src="../scripts/getdates.js"></script>
 	<link rel="stylesheet" href="styles/base.css">
 	<link rel="stylesheet" href="styles/larger.css">
@@ -40,6 +40,12 @@
 		</ul>
 	</nav>
 	<main>
+		<div id="visitModal" class="modal-visit">
+			<div class="visit-modal-content">
+				<span class="close">&times;</span>
+				<p id="visitModalMessage"></p>
+			</div>
+		</div>
 		<div class='header'>
 			<h1>Discover Hawaii</h1>
 			<h3>Safety in the sand and on land</h3>
@@ -65,11 +71,14 @@
 			</section>
 		
 			<section class="image-bar">
-				<img src="images/ocean-safety.webp" alt="Malama - take care of Hawaii" with="500" width="300"> 
-				<img src="images/malama-hawaii.webp" alt="Malama - take care of Hawaii" with="500" width="300">
-				<img src="images/cultural-events.webp" alt="Malama - take care of Hawaii" with="500" width="300"><img src="images/malama-hawaii.webp" alt="Malama - take care of Hawaii" with="500" width="300">
-				<img src="images/malama-hawaii.webp" alt="Malama - take care of Hawaii" with="500" width="300">
-				<img src="images/diamond-head-crater.webp" alt="Malama - take care of Hawaii" with="500" width="300">
+				<figure>
+					<img src="images/ocean-safety.webp" alt="ocean safety" max-width="500">
+					<figcaption>Be cautious and know before you go! Read the signs</figcaption> 
+				</figure>
+				<img src="images/malama-hawaii.webp" alt="Malama - take care of Hawaii" width="500">
+				<img src="images/cultural-events.webp" alt="cultural-events" width="500"><img src="images/iolani-palace.webp" alt="iolani palace" width="500">
+				<img src="images/bishop-museum.webp" alt="bishop museum" width="500">
+				<img src="images/diamond-head-crater.webp" alt="hike diamond head" width="500">
 			</section>
 		</div>
 	</main>
