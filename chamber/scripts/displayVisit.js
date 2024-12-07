@@ -3,11 +3,6 @@ function storeFirstVisit() {
   localStorage.setItem('firstVisit', currentDate);
 }
 
-// Check if the 'firstVisit' key exists in local storage
-if (!localStorage.getItem('firstVisit')) {
-  storeFirstVisit();
-}
-
 function getFirstVisitDate() {
   return localStorage.getItem('firstVisit');
 }
@@ -33,17 +28,20 @@ function closeModal() {
 }
 
 window.onload = function () {
-  if (!localStorage.getItem('firstVisit')) {
+  let firstVisitDate = localStorage.getItem('firstVisit');
+  console.log('First Visit Date:', firstVisitDate);
+
+  if (!firstVisitDate) {
     storeFirstVisit();
+    firstVisitDate = new Date().toISOString();
+    console.log('Storing first visit date:', firstVisitDate);
   }
 
-  const firstVisitDate = getFirstVisitDate();
   const daysDifference = calculateTimeDifference(firstVisitDate);
+  console.log('Days difference:', daysDifference);
 
   if (daysDifference === 0) {
     showModal('This is your first visit! Welcome!');
-  } else if (daysDifference < 1) {
-    showModal('Back so soon! Awesome! You last visited us earlier today.');
   } else if (daysDifference === 1) {
     showModal('You last visited us 1 day ago. Welcome back!');
   } else {
