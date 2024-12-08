@@ -1,0 +1,78 @@
+* {
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+	max-width: 860px;
+}
+
+:root {
+	--main-color: #57a773;
+	--seconday-color: #157145;
+	--tertiary-color: #d1faff;
+	--font-color: #01161e;
+}
+
+.main {
+	color: var(--font-color)
+}
+
+
+body {
+	margin: 0 auto;
+}
+
+header {
+	background: linear-gradient(0.25turn, var(--main-color), #d1faff, var(--seconday-color));
+	;
+	text-align: center;
+	font-size: 16px;
+	text-shadow: 2px 2px rgb(6, 100, 193);
+	padding-top: 30px;
+}
+
+.site1,
+.site1>p {
+	color: var(--font-color);
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	color: var(--font-color);
+	font-size: 18px;
+	padding: .5rem;
+}
+
+h1 {
+	font-family: 'Montserrat', sans-serif;
+	border-color: var(--seconday-color);
+	letter-spacing: .2rem;
+	padding: .5rem;
+}
+
+.card {
+	background-color: var(--main-color);;
+	border-style: solid;
+	border-width: 4px 4px 4px 4px;
+	border-color: var(--seconday-color);
+	border-radius: 0.3rem;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding-top: 25px;
+}
+
+footer,
+footer>p {
+	font-family: 'Montserrat', sans-serif;
+	/* letter-spacing: .2rem; */
+	margin-top: 25px;
+	font-size: 20px;
+	background-color: white;
+	color: var(--font-color);
+	text-align: center;
+	width: 100%;
+	position: sticky;
+}
