@@ -1,0 +1,24 @@
+@media only screen and (min-width: 950px) {
+	#myButton {
+		display: none
+	}
+	
+	ul.menuLinks,
+	ul.menuLinks.open {
+		display: flex;
+		justify-content: flex-end;
+	}
+	
+	ul.menuLink a:hover {
+		background-color: rgba(255, 255, 255, 0.2);
+	}
+	
+	nav {
+		grid-template-rows: 1fr;
+	}
+
+	.current-happenings {
+		grid-template-columns: 500px auto 500px;
+		gap: 20px;
+	}
+}

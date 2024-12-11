@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<meta name="description" content="Hawaii Chamber of Commerce">
+	<meta name="author" content="Kelsie Garcia">
+	<meta property="og:title" content="Book Space Library">
+	<meta property="og:type" content="website">
+	<!-- <meta property="og:image" content="">
+	<meta property="og:url" content="https://kelsiegarcia.github.io/wdd231/chamber/directory.html"> -->
+	<script defer src="../chamber/scripts/navbar.js"></script>
+	<script defer src="scripts/openlibraryapi.js"></script>
+	<script defer src="../scripts/getdates.js"></script>
+	<link rel="stylesheet" href="styles/base.css">
+	<link rel="stylesheet" href="styles/larger.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">
+	<title>Book Space Library</title>
+	<link rel="icon" href="favicon.ico">
 </head>
+
 <body>
-	<h1>Hello World</h1>
-	
+	<header>
+		<img src="images/bookspace-logo.webp" alt="logo for bookspace" id="logo" width="50" height="56">
+		<h1 id="title">Book Space Library</h1>
+		<button id="myButton"></button>
+	</header>
+
+	<nav id="animateMe">
+		<ul class="menuLinks">
+			<li class="current-menu-item"><a href="index.html" title="Home">Home</a></li>
+			<li><a href="search.html" title="Search">Book Search</a></li>
+			<li><a href="join.html" title="Join">Join</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<picture>
+			<source srcset="images/bookspace-hero.webp" alt="rows of color books" id="hero" width="1520" media="(min-width: 675px)">
+			<img class="hero" alt="small library with lightbulf" src="images/bookspace-mobile.webp">
+		</picture> 
+		<h1 class="header">Welcome to your space filled with books</h1>
+		<section class="current-happenings">
+			<div class="grid-item wide-item">
+				<h2>Book Club Events</h2>
+				<p>Attend our book club on Sunday<br> mornings at the local Morning Glass Cafe</p>
+				<img src="images/morning-glass.webp" alt="book club morning glass" width="500" height="300" loading="lazy">
+			</div>
+			<div class="grid-item smaller-item">
+				<h2>Book of the Month</h2>
+				<span id="book-month"></span>
+			</div>
+			<div class="grid-item form-card">
+				<h2>Join our book club!</h2>
+				<img src="images/bookspace-logo.webp" alt="book club" width="300" height="100" loading="lazy">
+				<button class="read-more">Sign up</button>
+			</div>
+		</section>
+		<div class="spotlight-header">Business Membership Spotlight</div>
+		<div id="spotlight"></div>
+
+		<footer>
+			<p>
+				WDD230 <span id="currentyear"></span> - Kelsie Garcia - Aloha, Hawaii
+			</p>
+			<p><span id="lastmodified"></span></p>
+		</footer>
+	</main>
 </body>
+
 </html>

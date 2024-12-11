@@ -479,7 +479,7 @@ a {
 /* discover page */
 .discover-grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	grid-gap: var(--padding-standard);
 	margin: 2rem;
 	justify-items: center;
@@ -493,19 +493,7 @@ a {
 	max-width: 500px;
 }
 
-.image-bar img {
-	transition: transform 0.3s ease-in-out;
-}
 
-.image-bar img:hover {
-	transform: scale(1.1);
-}
-
-.image-bar figcaption {
-	margin: 1rem;
-	font-size: 16px;
-
-}
 
 .side-bar {
 	display: flex;
@@ -526,17 +514,12 @@ a {
 
 .modal-visit {
 	display: none;
-	/* Hidden by default */
 	position: fixed;
-	/* Stay in place */
 	z-index: 1;
-	/* Sit on top */
 	left: 0;
 	top: 0;
 	width: 100%;
-	/* Full width */
 	height: 100%;
-	/* Full height */
 	background-color: rgba(0,0,0,0.5);
 	justify-content: center;
 	align-items: center;

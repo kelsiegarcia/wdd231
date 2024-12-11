@@ -1,4 +1,24 @@
 @media only screen and (min-width: 950px) {
+	.discover-grid {
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+	}
+
+	.image-bar img {
+		transition: transform 0.3s ease-in-out;
+	}
+
+	.image-bar img:hover {
+		transform: scale(1.1);
+	}
+
+	.image-bar figcaption {
+		margin: 1rem;
+		font-size: 16px;
+
+	}
+
+
 	#myButton {
 		display: none
 	}
