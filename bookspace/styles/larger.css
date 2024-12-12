@@ -1,6 +1,6 @@
 @media only screen and (min-width: 950px) {
 	#myButton {
-		display: none
+		display: none;
 	}
 	
 	ul.menuLinks,
@@ -21,4 +21,18 @@
 		grid-template-columns: 500px auto 500px;
 		gap: 20px;
 	}
+
+	#search-results {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		justify-items: center;
+		align-items: center;
+		gap: 40px;
+	}
+
+	.join {
+		bottom: 450px;
+	}
+
+	
 }

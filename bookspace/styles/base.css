@@ -113,6 +113,15 @@ nav.open {
 
 /* index main grid */
 
+.join {
+	position: absolute;
+	bottom: 375px;
+	left: 150px;
+	transform: translate(-50%, 50%);
+	color: black;
+	width: 225px;
+}
+
 .current-happenings {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -154,8 +163,8 @@ nav.open {
 	margin-bottom: 12px;
 }
 
+
 button {
-	margin-top: var(--padding-large);
 	padding: var(--padding-large);
 	border-radius: var(--border-radius);
 	font-size: 20px !important;
@@ -175,6 +184,7 @@ button:hover {
 
 button.read-more {
 	margin: 20px;
+	margin-top: var(--padding-large);
 
 }
 
@@ -183,21 +193,57 @@ button.read-more:hover {
 }
 
 
+/* search page */
+#search-results {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 40px;
+	margin: 3rem;
+}
 
+.book-cards {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 300px;
+}
 
+input[type="text"] {
+	width: 50%;
+	padding: var(--padding-standard);
+	border-radius: var(--border-radius);
+	border: 1px solid var(--color-border);
+}
 
-
+.search {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	padding: 1rem;
+}
 
 
 /* footer styles */
+
+
+
 footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 	font-family: var(--font-family-primary);
 	background-color: var(--color-primary);
 	color: var(--color-secondary);
 	text-align: center;
 	max-width: 100%;
 	align-content: center;
-	position: sticky;
+	position: relative;
 	height: 150px;
+	gap: 20px;
+}
+
+#footer-search {
+	height: 525px;
 }
 

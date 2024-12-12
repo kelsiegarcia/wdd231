@@ -3,17 +3,42 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script defer src="scripts/openlibraryapi.js"></script>
-	<title>Document</title>
+	<script defer src="scripts/searchButton.js" type="module"></script>
+	<script defer src="scripts/searchBooks.mjs" type="module"></script>
+	<script defer src="../scripts/getdates.js"></script>
+	<link rel="stylesheet" href="styles/base.css">
+	<link rel="stylesheet" href="styles/larger.css">
+	<title>Search for a book </title>
 </head>
 <body>
+	<header>
+		<img src="images/bookspace-logo.webp" alt="logo for bookspace" id="logo" width="50" height="56">
+		<h1 <id="title">Book Space Library</h1>
+		<button id="myButton"></button>
+	</header>
+	
+	<nav id="animateMe">
+		<ul class="menuLinks">
+			<li><a href="index.html" title="Home">Home</a></li>
+			<li class="current-menu-item"><a href="search.html" title="Search">Book Search</a></li>
+			<li><a href="join.html" title="Join">Join</a></li>
+		</ul>
+	</nav>
 	<section>
-		<!-- search input -->
-		<input type="text" id="search-input" placeholder="Search for books">
-		<!-- search button -->
-		<button id="search-button">Search</button>
-		<!-- search results -->
+		<div class="search">
+			<img src="images/2.png" alt="fox using openlibraryapi" width="200" height="200">
+			<h2>Find your books</h2>
+			<input type="text" id="search-input" placeholder="Search for book title">
+			<button id="search-button">Search</button>
+		</div>
 		<div id="search-results"></div>
 	</section>
+	<footer id="footer-search">
+		<p>Join our book club</p>
+		<p>
+			WDD230 <span id="currentyear"></span> - Kelsie Garcia - Aloha, Hawaii
+		</p>
+		<p><span id="lastmodified"></span></p>
+	</footer>
 </body>
 </html>
