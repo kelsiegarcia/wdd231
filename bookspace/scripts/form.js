@@ -16,17 +16,20 @@ function show(info) {
   return result;
 }
 
+function showConfetti() {
+  confetti.start();
+  setTimeout(() => confetti.stop(), 3000); // Stop confetti after 3 seconds
+}
+
 const timestamp = new Date().toLocaleString();
 const email = show('email');
 const showInfo = document.querySelector('#results');
 showInfo.innerHTML = `<p>Form for ${show('first')} ${show('last')}</p>
-<p>Email: ${show('email')} at ${show('email')}</p>
-<p>Phone: ${show('tel')} at ${show('email')}</p>
-<p>Address: ${show('address')} at ${show('email')}</p>
-<p>City: ${show('city')} at ${show('email')}</p>
-<p>State: ${show('state')} at ${show('email')}</p>
-<p>City: ${show('zip')} at ${show('email')}</p>
-<p>How did you hear about us: ${show('description')}</p> 
-<p>Favorite Genres: ${show('genr[]')}</p>
+<p>Title: ${show('title')} at ${show('organization')}</p>
+<p>Business Description: ${show('description')}</p> 
+<p>Membership Level: ${show('membership')}</p>
+<p>Your email: <a href="${email}">${email}</a></p>
 <p> Date and time processed: ${timestamp}</p>
 `;
+
+showConfetti();

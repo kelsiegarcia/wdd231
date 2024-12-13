@@ -1,11 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Search</title>
+	<meta name="description" content="Hawaii Chamber of Commerce">
+	<meta name="author" content="Kelsie Garcia">
+	<meta property="og:title" content="Hawaii Chamber of Commerce">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://kelsiegarcia.github.io/wdd231/chamber/images/city.webp">
+	<meta property="og:url" content="https://kelsiegarcia.github.io/wdd231/chamber/directory.html">
+	<script defer src="../chamber/scripts/navbar.js"></script>
+	<script defer src="../scripts/getdates.js"></script>
+	<script src="confetti-js/src/confetti.js"></script>
+	<link rel="stylesheet" href="styles/base.css">
+	<link rel="stylesheet" href="styles/larger.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">
+
+	<title>Join our Book Space Book Club</title>
+	<link rel="icon" href="favicon.ico">
 </head>
+
 <body>
+	<header>
+		<img src="images/bookspace-logo.webp" alt="logo for bookspace" id="logo" width="50" height="56">
+		<h1 <id="title">Book Space Library</h1>
+		<button id="myButton"></button>
+	</header>
 	
+	<nav id="animateMe">
+		<ul class="menuLinks">
+			<li class="current-menu-item"><a href="index.html" title="Home">Home</a></li>
+			<li><a href="search.html" title="Search">Book Search</a></li>
+			<li><a href="join.html" title="Join">Join</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<div class='header'>
+			<h1>Join Book Space Book Club</h1>
+			<h3>By filling out the form below</h3>
+		</div>
+		<div class="join-grid">
+			<div class="form">
+				<form method="GET" action="thankyou.html" class="designOne">
+					<label>First Name <input type="text" name="first" required autocomplete="given-name" title="First Name"></label>
+					<label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Last Name"></label>
+					<label>Email<input type="email" name="title" required autocomplete="email" title="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="email@address.com"/>
+					</label>
+					<label>Cell Phone <input type="tel" name="phone" autocomplete="tel" title="A Phone Number with dashes" placeholder="808-555-1234"></label>
+					<label>Address <input type="text" name="address" required autocomplete="address" title="Address"></label>
+					<label>City <input type="text" name="city" required autocomplete="address-level2" title="City"></label>
+					<label>State <input type="text" name="state" required autocomplete="address-level1" title="State"></label>
+					<label>Zip Code <input type="text" name="zip" required autocomplete="postal-code" title="Zip Code"></label>
+					
+					<h3 class="margin">Favorite genres</h3>
+					<label><input type="checkbox" name="genre[]" value="fiction"> Fiction</label>
+					<label><input type="checkbox" name="genre[]" value="nonfiction"> Nonfiction</label>
+					<label><input type="checkbox" name="genre[]" value="mystery"> Mystery</label>
+					<label><input type="checkbox" name="genre[]" value="romance"> Romance</label>
+					<label><input type="checkbox" name="genre[]" value="sci-fi"> Science Fiction</label>
+					<label><input type="checkbox" name="genre[]" value="fantasy"> Fantasy</label>
+					<label><input type="checkbox" name="genre[]" value="biography"> Biography</label>
+					<label for="description" class="margin">How did you hear about us?</label>
+					<textarea id="description" name="description" rows="10" cols="70"></textarea>
+
+					<input type="submit" value="Sign up now" id="submitButton">
+				</form>
+
+			</div>
+			<div id="membership-container"></div>
+			<dialog id="membership-cards">
+				<div class="modal-header-container">
+					<h3 id="modal-title"></h3>
+					<div id="close-modal">X</div>
+				</div>
+				<p id="modal-description"></p>
+				<p id="modal-benefits"></p>
+				<p id="modal-price"></p>
+			</dialog>
+		</div>
+		<footer>
+			<p>
+				WDD230 <span id="currentyear"></span> - Kelsie Garcia - Aloha, Hawaii
+			</p>
+			<p><span id="lastmodified"></span></p>
+		</footer>
+	</main>
 </body>
+
 </html>
