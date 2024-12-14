@@ -18,9 +18,9 @@
 	margin: 0;
 }
 
-.header,
-.header h1,
-.header h3 {
+.page-header,
+.page-header h1,
+.page-header h3 {
 	margin: 1rem 3rem;
 }
 
@@ -42,7 +42,9 @@ header {
 	color: var(--color-secondary);
 	font-family: var(--font-family-secondary);
 	font-size: 20px;
+	gap: 20px;
 	padding: var(--padding-standard);
+
 }
 
 img {
@@ -140,25 +142,12 @@ nav.open {
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* .current-happenings .wide-item > h2,
-.current-happenings .wide-item > p {
-	margin-bottom: 25px;
-} */
 
 .current-happenings h3,
 .current-happenings p {
 	padding: 20px;
 }
 
-.grid-item {
-	display: flex;
-	flex-direction: column;
-	/* justify-content: center; */
-	align-items: center;
-	border: 1px solid var(--color-border);
-	border-radius: var(--border-radius);
-	box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-}
 
 .form-card h2 {
 	margin-bottom: 12px;
@@ -183,10 +172,11 @@ button:hover {
 }
 
 
-button.read-more {
+button > .read-more {
 	margin: 20px;
 	margin-top: var(--padding-large);
-
+	text-decoration: none;
+	color: inherit;
 }
 
 button.read-more:hover {
@@ -199,9 +189,15 @@ button.read-more:hover {
 	align-items: center;
 }
 
-.api a {
+.footer-links a {
 	color: inherit;
 	text-decoration: underline;
+}
+
+.social-icons {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
 }
 
 /* search page */
@@ -210,6 +206,10 @@ button.read-more:hover {
 	grid-template-columns: 1fr;
 	gap: 40px;
 	margin: 3rem;
+}
+
+#search-input {
+	margin: 0;
 }
 
 .book-cards {
@@ -252,6 +252,13 @@ form {
 	margin: 1rem 0;
 }
 
+.bookclub-sidebar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+}
+
 label {
 	display: block;
 	font-size: 1.5rem;
@@ -259,9 +266,6 @@ label {
 	padding: .5rem;
 }
 
-/* #description {
-	margin-bottom: 15px;
-} */
 
 .margin {
 	margin-top: 20px;
@@ -326,6 +330,30 @@ input:-webkit-autofill {
 }
 
 
+.image-container {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	transition: transform 0.5s;
+}
+
+.image-title {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 5px;
+	font-size: 1.2em;
+}
+
+.image-container:hover {
+	transform: scale(1.1);
+}
+
+
+
+
 /* footer styles */
 footer {
 	display: grid;
@@ -342,8 +370,9 @@ footer {
 }
 
 #footer-search {
-	height: 525px;
+	margin-top: 275px
 }
+
 
 /* Thank you page  */
 #results {

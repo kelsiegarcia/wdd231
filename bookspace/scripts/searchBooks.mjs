@@ -1,6 +1,5 @@
 export async function searchBooks() {
   const searchInput = document.getElementById('search-input');
-  // const searchValue = searchInput.value;
   const searchValue = searchInput.value.trim();
   const results = document.getElementById('search-results');
   results.innerHTML = '';
@@ -31,7 +30,6 @@ export async function searchBooks() {
         const bookCover = document.createElement('img');
         bookCover.src = coverUrl;
         bookCover.alt = book.title;
-        //height and width of the image
         bookCover.width = 200;
         bookCover.height = 250;
 

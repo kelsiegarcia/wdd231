@@ -4,16 +4,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Hawaii Chamber of Commerce">
+	<meta name="description" content="Book Space">
 	<meta name="author" content="Kelsie Garcia">
-	<meta property="og:title" content="Hawaii Chamber of Commerce">
+	<meta property="og:title" content="Book Space">
 	<meta property="og:type" content="website">
-	<meta property="og:image" content="https://kelsiegarcia.github.io/wdd231/chamber/images/city.webp">
-	<meta property="og:url" content="https://kelsiegarcia.github.io/wdd231/chamber/directory.html">
+	<meta property="og:image" content="https://kelsiegarcia.github.io/wdd231/bookspace/images/bookspac-mobile.webp">
+	<meta property="og:url" content="https://kelsiegarcia.github.io/wdd231/chamber/search.html">
 	<script defer src="../chamber/scripts/navbar.js"></script>
 	<script defer src="../scripts/getdates.js"></script>
 	<script defer src="scripts/form.js"></script>
-	<!-- <script src="confetti-js/src/confetti.js"></script> -->
+	<script defer src="scripts/joinModal.js"></script>
 	<link rel="stylesheet" href="styles/base.css">
 	<link rel="stylesheet" href="styles/larger.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -24,7 +24,7 @@
 		rel="stylesheet">
 
 	<title>Join our Book Space Book Club</title>
-	<link rel="icon" href="favicon.ico">
+	<link rel="icon" href="bookspace-favicon.png">
 </head>
 
 <body>
@@ -36,18 +36,20 @@
 	
 	<nav id="animateMe">
 		<ul class="menuLinks">
-			<li class="current-menu-item"><a href="index.html" title="Home">Home</a></li>
+			<li><a href="index.html" title="Home">Home</a></li>
 			<li><a href="search.html" title="Search">Book Search</a></li>
-			<li><a href="join.html" title="Join">Join</a></li>
+			<li class="current-menu-item"><a href="join.html" title="Join">Join</a></li>
 		</ul>
 	</nav>
 
 	<main>
-		<div class='header'>
+		<div class='page-header'>
 			<h1>Join Book Space Book Club</h1>
 			<h3>By filling out the form below</h3>
+			
 		</div>
 		<div class="join-grid">
+
 			<div class="form">
 				<form method="GET" action="thankyou.html" class="designOne">
 					<label>First Name <input type="text" name="first" required autocomplete="given-name" title="First Name"></label>
@@ -72,24 +74,53 @@
 
 					<input type="submit" value="Sign up now" id="submitButton">
 				</form>
-
 			</div>
-			<div id="membership-container"></div>
-			<dialog id="membership-cards">
+			<div class="bookclub-sidebar">
+				<h2>Book Club Benefits</h2>
+				<!-- <img src="images/fox-member.png" alt="Fox Honorary Member" width="400" height="200"> -->
+		
+				<div class="image-container">
+					<h3 class="image-title">Local Book Fair</h3>
+					<img src="images/bookfair.webp" alt="Local Book Fair" width="300" height="300" loading="lazy">
+				</div>
+				<div class="image-container">
+					<h3 class="image-title">Get free merch</h3>
+					<img src="images/bookmark.webp" alt="Bookmark" width="300" height="300" loading="lazy">
+				</div>
+				<div class="image-container">
+					<h3 class="image-title">Book club schedule</h3>
+					<img src="images/stack.webp" alt="Book Schedule" width="300" height="300" loading="lazy">
+				</div>
+			</div>
+
+			<dialog class="modal"id="image-modal">
 				<div class="modal-header-container">
 					<h3 id="modal-title"></h3>
-					<div id="close-modal">X</div>
+					<span id="close-modal">X</span>
 				</div>
 				<p id="modal-description"></p>
-				<p id="modal-benefits"></p>
-				<p id="modal-price"></p>
 			</dialog>
 		</div>
 		<footer>
 			<p>
 				WDD230 <span id="currentyear"></span> - Kelsie Garcia - Aloha, Hawaii
 			</p>
-			<p><span id="lastmodified"></span></p>
+			<div class="social-icons">
+				<a href="https://www.instagram.com" title="Instagram"><img src="images/ig.png" alt="Instagram icon" width="24"
+						height="24"></a>
+				<a href="https://www.facebook.com" title="Facebook"><img src="images/fb.png" alt="Facebook icon" width="24"
+						height="24"></a>
+				<a href="https://www.twitter.com" title="Twitter"><img src="images/twitter.png" alt="Twitter icon" width="24"
+						height="24"></a>
+			</div>
+		
+			<p class="footer-links">Powered by <a href="https://openlibrary.org/" title="Open Library API">Open Library API</a>
+			</p>
+			<p class="footer-links"><span id="lastmodified"></span></p>
+			<p class="footer-links"><a href="join.html">Sign up for book club</a></p>
+			<p class="footer-links"><a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons">Facebook icons
+					created by Freepik -
+					Flaticon</a></p>
 		</footer>
 	</main>
 </body>

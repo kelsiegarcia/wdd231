@@ -33,11 +33,13 @@ async function monthBook(title) {
 const bookMonth = document.getElementById('book-month');
 const loadingIndicator = document.createElement('p');
 loadingIndicator.textContent = 'Loading...';
-loadingIndicator.style.width = '300px'; // Assuming the cover image size is 128px
-loadingIndicator.style.height = '300px'; // Assuming the cover image size is 193px
+loadingIndicator.style.width = '300px';
+loadingIndicator.style.height = '300px';
 loadingIndicator.style.display = 'flex';
 loadingIndicator.style.alignItems = 'center';
 loadingIndicator.style.justifyContent = 'center';
+loadingIndicator.style.fontSize = '20px';
+loadingIndicator.style.textAlign = 'center';
 bookMonth.appendChild(loadingIndicator);
 
 monthBook('Kingdom of Ash')
