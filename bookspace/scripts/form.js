@@ -1,35 +1,68 @@
 const currentUrl = window.location.href;
 const everything = currentUrl.split('?');
-let formData = everything[1].split('&');
+let formData = everything[1] ? everything[1].split('&') : [];
 
 function show(info) {
-  let result = '';
+  let result = [];
   formData.forEach((element) => {
     if (element.startsWith(info)) {
-      result = element.split('=')[1].replace('%40', '@').replace(/\+/g, ' ');
-
-      if (info === 'description') {
-        result = element.split('=')[1].split('+').join(' ');
+      let value = decodeURIComponent(element.split('=')[1].replace(/\+/g, ' '));
+      if (info === 'cell') {
+        value = value.replace(/-/g, '');
       }
+      result.push(value);
     }
   });
-  return result;
-}
 
-function showConfetti() {
-  confetti.start();
-  setTimeout(() => confetti.stop(), 3000); // Stop confetti after 3 seconds
+  return info === 'genre' ? result.join(', ') : result[0] || '';
 }
 
 const timestamp = new Date().toLocaleString();
-const email = show('email');
-const showInfo = document.querySelector('#results');
-showInfo.innerHTML = `<p>Form for ${show('first')} ${show('last')}</p>
-<p>Title: ${show('title')} at ${show('organization')}</p>
-<p>Business Description: ${show('description')}</p> 
-<p>Membership Level: ${show('membership')}</p>
-<p>Your email: <a href="${email}">${email}</a></p>
-<p> Date and time processed: ${timestamp}</p>
-`;
+const email = show('email') || 'Email not provided';
 
-showConfetti();
+const showInfo = document.querySelector('#results');
+if (showInfo) {
+  showInfo.innerHTML = `<p>Form for ${show('first')} ${show('last')}</p>
+  <p> Email: ${email}</p>
+  <p> Cell: ${show('phone')}</p>
+  <p> Address: ${show('address')}</p>
+  <p> City: ${show('city')}</p>
+  <p> State: ${show('state')}</p>
+  <p> Zip: ${show('zip')}</p>
+  <p> Favorite Genre: ${show('genre')}</p>
+  <p> Date and time processed: ${timestamp}</p>`;
+}
+
+window.onload = () => {
+  const currentUrl = window.location.href;
+
+  if (currentUrl.includes('thankyou.html')) {
+    const confettiContainer = document.querySelector('.confetti-container');
+
+    function createConfetti() {
+      const confetti = document.createElement('div');
+      confetti.classList.add('confetti');
+      confettiContainer.appendChild(confetti);
+
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.top = Math.random() * 100 + 'vh';
+      confetti.style.width = Math.random() * 10 + 'px';
+      confetti.style.height = Math.random() * 10 + 'px';
+      confetti.style.backgroundColor = [
+        'red',
+        'blue',
+        'green',
+        'yellow',
+        'purple',
+      ][Math.floor(Math.random() * 5)];
+    }
+
+    function showConfetti() {
+      for (let i = 0; i < 100; i++) {
+        createConfetti();
+      }
+    }
+
+    showConfetti();
+  }
+};

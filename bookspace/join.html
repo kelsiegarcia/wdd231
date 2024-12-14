@@ -12,7 +12,8 @@
 	<meta property="og:url" content="https://kelsiegarcia.github.io/wdd231/chamber/directory.html">
 	<script defer src="../chamber/scripts/navbar.js"></script>
 	<script defer src="../scripts/getdates.js"></script>
-	<script src="confetti-js/src/confetti.js"></script>
+	<script defer src="scripts/form.js"></script>
+	<!-- <script src="confetti-js/src/confetti.js"></script> -->
 	<link rel="stylesheet" href="styles/base.css">
 	<link rel="stylesheet" href="styles/larger.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -29,7 +30,7 @@
 <body>
 	<header>
 		<img src="images/bookspace-logo.webp" alt="logo for bookspace" id="logo" width="50" height="56">
-		<h1 <id="title">Book Space Library</h1>
+		<h1 id="title">Book Space Library</h1>
 		<button id="myButton"></button>
 	</header>
 	
@@ -51,9 +52,8 @@
 				<form method="GET" action="thankyou.html" class="designOne">
 					<label>First Name <input type="text" name="first" required autocomplete="given-name" title="First Name"></label>
 					<label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Last Name"></label>
-					<label>Email<input type="email" name="title" required autocomplete="email" title="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="email@address.com"/>
-					</label>
-					<label>Cell Phone <input type="tel" name="phone" autocomplete="tel" title="A Phone Number with dashes" placeholder="808-555-1234"></label>
+					<label>Email<input type="email" name="email" required autocomplete="email" title="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="email@address.com"/></label>
+					<label>Cell Phone <input type="tel" name="phone" autocomplete="tel" title="A Phone Number with dashes" placeholder="808-555-1234" pattern="\d{3}[-]\d{3}[-]\d{4}"></label>
 					<label>Address <input type="text" name="address" required autocomplete="address" title="Address"></label>
 					<label>City <input type="text" name="city" required autocomplete="address-level2" title="City"></label>
 					<label>State <input type="text" name="state" required autocomplete="address-level1" title="State"></label>

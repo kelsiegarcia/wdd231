@@ -16,7 +16,7 @@ async function monthBook(title) {
 
       return {
         title: book.title,
-        author: book.author_name,
+        author: book.author_name ? book.author_name.join(', ') : 'Unknown',
         coverUrl: coverUrl,
       };
     } else {
@@ -30,24 +30,35 @@ async function monthBook(title) {
 }
 
 // Call the monthBook function with the title of the book
+const bookMonth = document.getElementById('book-month');
+const loadingIndicator = document.createElement('p');
+loadingIndicator.textContent = 'Loading...';
+loadingIndicator.style.width = '300px'; // Assuming the cover image size is 128px
+loadingIndicator.style.height = '300px'; // Assuming the cover image size is 193px
+loadingIndicator.style.display = 'flex';
+loadingIndicator.style.alignItems = 'center';
+loadingIndicator.style.justifyContent = 'center';
+bookMonth.appendChild(loadingIndicator);
+
 monthBook('Kingdom of Ash')
   .then((bookInfo) => {
+    bookMonth.removeChild(loadingIndicator);
     if (bookInfo) {
       displayMonthBook(bookInfo);
     }
   })
   .catch((error) => {
+    bookMonth.removeChild(loadingIndicator);
     console.error('Error:', error);
   });
 
 function displayMonthBook(bookInfo) {
-  const bookMonth = document.getElementById('book-month');
   const bookTitle = document.createElement('h3');
   const bookAuthor = document.createElement('p');
   const bookCover = document.createElement('img');
 
   bookTitle.textContent = `${bookInfo.title}`;
-  bookAuthor.textContent = `Author${bookInfo.author}`;
+  bookAuthor.textContent = `Author: ${bookInfo.author}`;
   bookCover.src = `${bookInfo.coverUrl}`;
   bookCover.alt = `${bookInfo.title}`;
   bookMonth.appendChild(bookTitle);
